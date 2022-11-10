@@ -17,7 +17,7 @@ while board.who_won() == "" and not board.is_full():
             y = int(input("y? "))
         x -= 1
         y -= 1
-        moved = board.do_move(x, y, current_player == "x")
+        moved = board.do_move(x, y, current_player == "o")
         if moved:
             board.print_board()
         else:

@@ -52,9 +52,10 @@ class TicTacToeBoard:
     def print_board(self):
         for j in range(3):
             for i in range(3):
-                print(" %s " % self.board[j][i] or " ", end="")
-                if i<2:
+                print(" %1s " % self.board[j][i], end="")
+                if i < 2:
                     print("|", end="")
                 else:
                     print("")
-            print("____________")
+            if j < 2:
+                print("---+---+---")
